@@ -5,7 +5,7 @@ import {createAppContainer} from 'react-navigation';
 import HomeScreen from "./src/Screens/HomeScreen";
 import ListScreen from "./src/Screens/ListScreen";
 
-
+//create a navigator
 const Home = createStackNavigator(
     {
         Homes: HomeScreen,

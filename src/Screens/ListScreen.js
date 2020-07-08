@@ -43,7 +43,7 @@ const ListScreen = () => {
                         title= "Edit details"    //display button name as Edit details
                     />
                     <TouchableOpacity onPress = {() => console.log('Help Pressed')}>      //not an element
-                        <Text>Help</Text>   //the element(Help) inside the <Text></Text> tag are working as a touchable button
+                        <Text>Help</Text>      //the element(Help) inside the <Text></Text> tag are working as a touchable button
                     </TouchableOpacity>
                 </View>
             );

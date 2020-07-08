@@ -8,6 +8,7 @@ import HomeScreen from './src/Screens/HomeScreen';
 import ListScreen from './src/Screens/ListScreen';
 
 /******************************************************************************/
+
 const navigator = createStackNavigator(
   {
     Home:HomeScreen
