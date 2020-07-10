@@ -11,10 +11,10 @@ import { StyleSheet, Text, View, FlatList, Button, TouchableOpacity } from 'reac
 //Create ListScreen component
 const ListScreen = () => {
     const details = [
-        { name : 'Name1' },  //, key : '0'},
-        { address : 'Address1'}, // , key : '1'},
-        { contactNumber : 'Contact Number1'}, // , key : '2'},
-        { email : 'Email1'} // , key : '3'},
+        { name : 'Name1' ,   key : '0'},
+        { address : 'Address1',  key : '1'},
+        { contactNumber : 'Contact Number1',  key : '2'},
+        { email : 'Email1' , key : '3'}
         //can asign a key manualy for every item in the array
     ];
 
@@ -23,7 +23,7 @@ const ListScreen = () => {
     <FlatList     
         //horizontal     // ={true}  //can move horizontally with scroll bar
         //showsHorizontalScrollIndicator = {false}       //hide scroll bar in the bottom of screen
-        keyExtractor = {detail => friend.name} // can asign a key auto for every item in the array
+        keyExtractor = {detail => detail.name}   // can asign a key auto for every item in the array
         data={details} 
         //take one item and display(render) it as list
         renderItem = {({item}) => {   
@@ -35,17 +35,23 @@ const ListScreen = () => {
                                                     Contact Number:{item.contactNumber} 
                                                     Email:{item.email}
                     </Text>
-                //<Text>{item.address}</Text>
-                //<Text>{item.contactNumber}</Text>
-                //<Text>{item.email}</Text>
+
                     <Button      //create button element
                         onPress={() => console.log('Button pressed')}  //pressable button //to detect the press event use onPress prop.  using error function
                         title= "Edit details"    //display button name as Edit details
                     />
-                    <TouchableOpacity onPress = {() => console.log('Help Pressed')}>      //not an element
-                        <Text>Help</Text>      //the element(Help) inside the <Text></Text> tag are working as a touchable button
+
+                    <TouchableOpacity onPress = {() => props.navigation.navigate('HelpScreen')}>      
+                        <Text>Help</Text>      
                     </TouchableOpacity>
+
                 </View>
+                //<Text>{item.address}</Text>
+                //<Text>{item.contactNumber}</Text>
+                //<Text>{item.email}</Text>
+                //<TouchableOpacity onPress = {() => console.log('Help Pressed')}>  use to create a touchable part 
+                //onPress is not an element
+                //the element(Help) inside the <Text></Text> tag are working as a touchable button
             );
         }}
     />
