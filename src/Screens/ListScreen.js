@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, View, Text, FlatList, Button, TouchableOpacity  } from 'react-native';
 
-import Details from '../component/Details';
+import Details from '../components/Details';
 
 
 const ListScreen = () => {
