@@ -72,7 +72,7 @@ export default class Login extends Component {
         />   
         <Button
           color="#3740FE"
-          title="Signin"
+          title="Sign in"
           onPress={() => this.userLogin()}
         />   
 
