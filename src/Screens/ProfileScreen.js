@@ -67,4 +67,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default ListScreen;    //after export ListScreen can access any place in this project
+export default ProfileScreen;    //after export ListScreen can access any place in this project
