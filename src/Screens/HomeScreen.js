@@ -21,7 +21,7 @@ const HomeScreen = (props) => { //props is an argumentto the function
 
 const styles = StyleSheet.create({
   homeStyle:{
-    fontSize: 30
+    fontSize: 50
   },
   discriptionStyle: {
     fontSize: 20

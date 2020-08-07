@@ -92,6 +92,8 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+import HomeScreen from './src/Screens/HomeScreen';
+import ListScreen from './src/Screens/ListScreen';
 import Login from './src/components/login';
 import Signup from './src/components/signup';
 import Dashboard from './src/components/dashboard';
@@ -112,6 +114,13 @@ function MyStack() {
           fontWeight: 'bold',
         },
       }}>
+      
+      <Stack.Screen 
+        name="Home" 
+        component={HomeScreen} 
+        options={{ title: 'Home' }}
+      /> 
+
       <Stack.Screen 
         name="Signup" 
         component={Signup} 
@@ -133,6 +142,12 @@ function MyStack() {
          {headerLeft: null} 
        }
       />
+      <Stack.Screen 
+        name="ListScreen" 
+        component={ListScreen} 
+        options={{ title: 'Shopping List' }}
+      /> 
+      
     </Stack.Navigator>
   );
 }
