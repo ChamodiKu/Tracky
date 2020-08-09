@@ -1,7 +1,9 @@
 import React from 'react';
-import {StyleSheet, View, Text, FlatList, Button, TouchableOpacity } from 'react-native'
+import {StyleSheet, View, Text, FlatList, Button, TouchableOpacity } from 'react-native';
 
-import ImageDetails from '../component/ImageDetails'
+import ImageDetails from '../component/ImageDetails';
+import firebase from '../../database/firebase';
+
 const Template = () => {
     return(
         <View>
