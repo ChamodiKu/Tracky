@@ -103,11 +103,11 @@ const Stack = createStackNavigator();
 function MyStack() {
   return (
     <Stack.Navigator
-      initialRouteName="Signup"
+      initialRouteName="Home"
       screenOptions={{
         headerTitleAlign: 'center',
         headerStyle: {
-          backgroundColor: '#3740FE',
+          backgroundColor: '#28B463',
         },
         headerTintColor: '#fff',
         headerTitleStyle: {
@@ -118,7 +118,7 @@ function MyStack() {
       <Stack.Screen 
         name="Home" 
         component={HomeScreen} 
-        options={{ title: 'Home' }}
+        options={{ title: 'Tracky' }}
       /> 
 
       <Stack.Screen 

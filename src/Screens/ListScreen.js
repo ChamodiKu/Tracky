@@ -1,8 +1,9 @@
+/*******************
 import React from 'react';
 import {StyleSheet, View, Text, FlatList, Button, TouchableOpacity  } from 'react-native';
 
 import Details from '../components/Details';
-
+import firebase from '../../database/firebase';
 
 const ListScreen = () => {
     return(
@@ -29,3 +30,65 @@ const style =StyleSheet.create ({
 });
 
 export default ListScreen;
+******************/
+// components/dashboard.js
+
+import React, { Component } from 'react';
+import { StyleSheet, View, Text, Button } from 'react-native';
+
+import firebase from '../../database/firebase';
+import Details from '../components/Details';
+
+export default class ListScreen extends Component {
+  constructor() {
+    super();
+    this.state = { 
+      uid: ''
+    }
+  }
+
+  signOut = () => {
+    firebase.auth().signOut().then(() => {
+      this.props.navigation.navigate('Login')
+    })
+    .catch(error => this.setState({ errorMessage: error.message }))
+  }  
+
+  render() {
+    this.state = { 
+      displayName: firebase.auth().currentUser.displayName,
+      uid: firebase.auth().currentUser.uid
+    }    
+    return (
+      <View style={styles.container}>
+        <Text style = {styles.textStyle}>
+          Hello {this.state.displayName} ,
+        </Text>
+        <Details ShopName = "Arpico"/>
+            <Details ShopName = "Cargills"/>
+            <Details ShopName = "Keels"/>
+            <Details ShopName = "Sathosa"/>
+            <Details/>
+
+        <Button
+          color="#28B463"
+          title="Logout"
+          onPress={() => this.signOut()}
+        />
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    display: "flex",
+    padding: 35,
+    backgroundColor: '#fff'
+  },
+  textStyle: {
+    fontSize: 15,
+    marginBottom: 20
+  }
+});

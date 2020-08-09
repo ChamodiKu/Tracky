@@ -9,6 +9,7 @@ import {
     TouchableOpacity       //import TouchableOpacity to insert highly customizable component that can detect a press on just about any kind of element
 } from 'react-native';
 
+import firebase from '../../database/firebase';
 
 //Create ListScreen component
 const ListScreen = () => {

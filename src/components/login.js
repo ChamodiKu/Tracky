@@ -40,7 +40,7 @@ export default class Login extends Component {
           email: '', 
           password: ''
         })
-        this.props.navigation.navigate('Dashboard')
+        this.props.navigation.navigate('ListScreen')
       })
       .catch(error => this.setState({ errorMessage: error.message }))
     }
@@ -71,7 +71,7 @@ export default class Login extends Component {
           secureTextEntry={true}
         />   
         <Button
-          color="#3740FE"
+          color="#28B463"
           title="Sign in"
           onPress={() => this.userLogin()}
         />   
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1
   },
   loginText: {
-    color: '#3740FE',
+    color: '#28B463',
     marginTop: 25,
     textAlign: 'center'
   },
