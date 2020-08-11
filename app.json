@@ -4,9 +4,23 @@
     "slug": "Tracky",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logo.png",
+    "platforms": [
+      "android",
+      "ios",
+      "web"
+    ],
+
+    "sdkVersion": "30.0.0",
+    "android": {
+      "package": "com.lingonsaft.myapp",
+      "versionCode": 1,
+      "permissions": [],
+      "icon": "./assets/logo.png"
+    },
+
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/shopping.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -21,6 +35,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "(Mini Project Title:- mobile app to track shopping list/requirements)",
+    "githubUrl": "https://github.com/ChamodiKu/Tracky.git"
   }
 }

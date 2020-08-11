@@ -11,8 +11,8 @@ import {
 
 import firebase from '../../database/firebase';
 
-//Create ListScreen component
-const ListScreen = () => {
+//Create ProfileScreen component
+const ProfileScreen = () => {
     const details = [
         { name : 'Name1' ,   key : '0'},
         { address : 'Address1',  key : '1'},
@@ -68,4 +68,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default ProfileScreen;    //after export ListScreen can access any place in this project
+export default ProfileScreen;    //after export ProfileScreen can access any place in this project

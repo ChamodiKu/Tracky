@@ -1,28 +1,27 @@
 import React from 'react';
-import {
-    StyleSheet, View, Text, FlatList, Button, TouchableOpacity, 
-    Image      //import Image (a new primitive component)
-} from 'react-native'
+import {View, Text, StyleSheet, Image} from 'react-native'
 
-import firebase from '../../database/firebase';
-
-const ImageDetails = props => {
+//const ImageDetails = (props) => {
+const ImageDetails = ({ imageSource, title}) => {
+    //console.log (props);
+    //props use for system to pass data from a parent to a child
     return(
         <View>
-            <Image source={require('../../assets/beach.jpg')}/>
-            <Text>{props.ImageTitle}</Text>
+            <Image source = {imageSource} />
+            <Text style = {styles.ImageDetailsStyle}>
+                {title}
+            </Text>
         </View>
     );
+    //<Image source = {require('../../assets/beach.jpg')}/>
+    //Image tag ue to add a image, source mean where the image stores in
 };
 
-
-const style =StyleSheet.create ({
-    ImageDetailsStyle:
-        {
-            fontSize: 20,
-        }
+const styles = StyleSheet.create ({
+    ImageDetailsStyle:{
+        fontSize: 20
+    }
 
 });
-
 
 export default ImageDetails;
