@@ -70,15 +70,18 @@ export default class ListScreen extends Component {
             <Details ShopName = "Sathosa"/>
             <Details/>
 
-        <Button
-          color="#28B463"
-          title="Logout"
-          onPress={() => this.signOut()}
-        />
+        
       </View>
     );
   }
 }
+/*
+<Button
+          color="#28B463"
+          title="Logout"
+          onPress={() => this.signOut()}
+        />
+*/
 
 const styles = StyleSheet.create({
   container: {

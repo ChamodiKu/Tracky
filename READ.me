@@ -1,4 +1,37 @@
-A readme file:
-Should contain all details (step-wise) on the mobile app installation, system requirements, configuration, and how to use it. 
-Should contain all details to set up the react-native project and execute. 
-Any assumption, special configuration 
+READ ME
+Setting-up the Environment
+Prerequisite
+    • Expo App
+    • Node - Node 8.3 or newer 
+    • Python2
+    • JDK - Version 8 or newer 
+Manual Installation or Chocolatey installation 
+  	choco install -y nodejs.install python2 jdk8
+node –v, npm –v
+Development Environment
+    • Expo with Visual Studio Code
+Environmental Variables
+    • Add platform-tools to Path
+React Native CLI – Create a new project
+React Native has a built-in command line interface, which you can use to generate a new  project.
+You can access it without installing anything globally using npx, which ships with Node.js.
+expo init Tracky
+npx react-native init  Tracky
+ 
+React Native CLI – expo start
+The command above starts Metro Blundler.
+After loading the expo developer tools site we can choose which method we want to run our project. 
+We can choose ,
+	Run on Android device/emulator
+	Run on iOS simulator
+	Send link with email…
+	Publish or republish project…  
+Also we can scan the given QR code by expo app ad run our project.
+npx react-native start
+    • But I can’t implement this project using Android Studio. Because installation of Android Studio I get ppa error. Then I am connect with expo.
+    • I fallow stackoverflow to solve this problem. But those answers not correct my issue
+      Refere : - https://askubuntu.com/questions/866901/what-can-i-do-if-a-repository-ppa-does-not-have-a-release-file
+      https://github.com/react-navigation/react-navigation/issues/2765
+      
+Reference:-udemy - The Complete React Native + Hooks Course[2020 Edition]
+    • You can visit my app using this url : -  https://expo.io/@/Tracky 

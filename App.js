@@ -97,6 +97,8 @@ import ListScreen from './src/Screens/ListScreen';
 import Login from './src/components/login';
 import Signup from './src/components/signup';
 import Dashboard from './src/components/dashboard';
+//import MenueScreen from './src/Screens/MenueScreen';
+//import Supporter from './src/Screens/Supporter';
 
 const Stack = createStackNavigator();
 
@@ -142,12 +144,12 @@ function MyStack() {
          {headerLeft: null} 
        }
       />
+      
       <Stack.Screen 
         name="ListScreen" 
         component={ListScreen} 
         options={{ title: 'Shopping List' }}
       /> 
-      
     </Stack.Navigator>
   );
 }
