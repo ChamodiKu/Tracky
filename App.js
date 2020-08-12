@@ -99,6 +99,9 @@ import Signup from './src/components/signup';
 import Dashboard from './src/components/dashboard';
 //import MenueScreen from './src/Screens/MenueScreen';
 //import Supporter from './src/Screens/Supporter';
+import UpdateAccountScreen from './src/Screens/UpdateAccountScreen';
+import ProfileScreen from './src/Screens/ProfileScreen';
+import DeleteAccountScreen from './src/Screens/DeleteAccountScreen';
 
 const Stack = createStackNavigator();
 
@@ -150,6 +153,25 @@ function MyStack() {
         component={ListScreen} 
         options={{ title: 'Shopping List' }}
       /> 
+
+      <Stack.Screen 
+        name="UpdateAccountScreen" 
+        component={UpdateAccountScreen} 
+        options={{ title: 'Update Account Details' }}
+      /> 
+
+      <Stack.Screen 
+        name="ProfileScreen" 
+        component={ProfileScreen} 
+        options={{ title: 'Profile' }}
+      />
+
+      <Stack.Screen 
+        name="DeleteAccountScreen" 
+        component={DeleteAccountScreen} 
+        options={{ title: 'Delete' }}
+      /> 
+
     </Stack.Navigator>
   );
 }

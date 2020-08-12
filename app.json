@@ -5,24 +5,15 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/logo.png",
-    "platforms": [
-      "android",
-      "ios",
-      "web"
-    ],
-
-    "sdkVersion": "30.0.0",
-    "android": {
-      "package": "com.lingonsaft.myapp",
-      "versionCode": 1,
-      "permissions": [],
-      "icon": "./assets/logo.png"
-    },
-
     "splash": {
-      "image": "./assets/shopping.png",
+      "image": "./assets/loding.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
+    },
+    "sdkVersion": "38.0.0",
+    "android" : {
+      "package": "com.chaku.Tracky",
+      "versionCode" : 1
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -34,7 +25,10 @@
       "supportsTablet": true
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/logo.png"
+    },
+    "notification": {
+      "icon": "./src/assets/notification.png"
     },
     "description": "(Mini Project Title:- mobile app to track shopping list/requirements)",
     "githubUrl": "https://github.com/ChamodiKu/Tracky.git"

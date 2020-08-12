@@ -38,7 +38,18 @@ import { StyleSheet, View, Text, Button } from 'react-native';
 
 import firebase from '../../database/firebase';
 import Details from '../components/Details';
+/*
+export function deleteAccount(email, deleteComplete){
+  account.deleteAt = firebase.firestore.FieldValue.serverTimestamp();
+  console.log(account);
 
+  firebase.firestore()
+    .collection('Account')
+    .doc(account.id).delete()
+    .then(() => deleteComplete())
+    .catch((error) => console.log(error));
+}
+*/
 export default class ListScreen extends Component {
   constructor() {
     super();
@@ -54,6 +65,13 @@ export default class ListScreen extends Component {
     .catch(error => this.setState({ errorMessage: error.message }))
   }  
 
+/*
+  deleteAccount = () => {
+    firebase.auth().delete().then(() => {
+      this.props.navigation.navigate('HomeScreen')
+    })
+  }
+*/
   render() {
     this.state = { 
       displayName: firebase.auth().currentUser.displayName,
@@ -65,23 +83,28 @@ export default class ListScreen extends Component {
           Hello {this.state.displayName} ,
         </Text>
         <Details ShopName = "Arpico"/>
-            <Details ShopName = "Cargills"/>
-            <Details ShopName = "Keels"/>
-            <Details ShopName = "Sathosa"/>
-            <Details/>
+          <Details ShopName = "Cargills"/>
+          <Details ShopName = "Keels"/>
+          <Details ShopName = "Sathosa"/>
+        <Details/>
 
-        
-      </View>
-    );
-  }
-}
-/*
-<Button
+        <Button
           color="#28B463"
           title="Logout"
           onPress={() => this.signOut()}
         />
-*/
+
+        <Button
+          color="#28B463"
+          title="Profile"
+          onPress={() => this.props.navigation.navigate('ProfileScreen')}
+        />
+
+      </View>
+    );
+  }
+}
+
 
 const styles = StyleSheet.create({
   container: {

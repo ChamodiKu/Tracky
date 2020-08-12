@@ -40,7 +40,7 @@ export default class Login extends Component {
           email: '', 
           password: ''
         })
-        this.props.navigation.navigate('MenueScreen')
+        this.props.navigation.navigate('ListScreen')
       })
       .catch(error => this.setState({ errorMessage: error.message }))
     }
@@ -62,6 +62,7 @@ export default class Login extends Component {
           value={this.state.email}
           onChangeText={(val) => this.updateInputVal(val, 'email')}
         />
+        
         <TextInput
           style={styles.inputStyle}
           placeholder="Password"
@@ -69,7 +70,8 @@ export default class Login extends Component {
           onChangeText={(val) => this.updateInputVal(val, 'password')}
           maxLength={15}
           secureTextEntry={true}
-        />   
+        />
+
         <Button
           color="#28B463"
           title="Sign in"

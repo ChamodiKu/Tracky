@@ -1,12 +1,13 @@
 import React from 'react';
 import {StyleSheet, View, Text, FlatList, Button, TouchableOpacity  } from 'react-native'
 
-const logout = () => {
+const UpdateAccountScreen = () => {
     return(
         <View>
-            <Text>would you like to logout</Text>
+            <Text>would you like to UpdateAccount</Text>
             <Button
-                title = "Log out"
+                color="#28B463"
+                title = "Update"
             />
         </View>
 
@@ -21,4 +22,4 @@ const style =StyleSheet.create ({
 
 });
 
-export default logout;
+export default UpdateAccountScreen;
