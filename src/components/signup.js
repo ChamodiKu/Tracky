@@ -42,7 +42,8 @@ export default class Signup extends Component {
           isLoading: false,
           displayName: '',
           email: '', 
-          password: ''
+          password: '',
+          phoneNumber: ''
         })
         this.props.navigation.navigate('Login')
       })
@@ -79,7 +80,13 @@ export default class Signup extends Component {
           onChangeText={(val) => this.updateInputVal(val, 'password')}
           maxLength={15}
           secureTextEntry={true}
-        />   
+        />
+        <TextInput
+          style={styles.inputStyle}
+          placeholder="Phone Number"
+          value={this.state.phoneNumber}
+          onChangeText={(val) => this.updateInputVal(val, 'phoneNumber')}
+        />
         <Button
           color="#52BE80"
           title="Signup"

@@ -28,7 +28,7 @@
       "favicon": "./assets/logo.png"
     },
     "notification": {
-      "icon": "./src/assets/notification.png"
+      "icon": "./assets/notification.png"
     },
     "description": "(Mini Project Title:- mobile app to track shopping list/requirements)",
     "githubUrl": "https://github.com/ChamodiKu/Tracky.git"
