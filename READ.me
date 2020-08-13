@@ -1,24 +1,41 @@
 READ ME
+
 Setting-up the Environment
+
 Prerequisite
-    • Expo cli  3.21.5
+    • Expo  - expo sdk 35.0.0 or more
     • Node - Node 8.3 or newer 
     • Python2
     • JDK - Version 8 or newer 
-Manual Installation or Chocolatey installation 
-  	choco install -y nodejs.install python2 jdk8
-node –v, npm –v
+
+Manual Installation
+    • Install nodejs
+      sudo apt install nodejs
+      nodejs -v
+    • Install nodejs package manager(npm)
+      sudo apt install npm
+      npm -v
+    • Install python2
+      sudo apt install python2
+      sudo apt install python-minimal
+      python2 -V
+    • Install jdk8
+      sudo apt install openjdk-8-jre-headless
+      java -version
+    • Install Expo CLI
+      npm install -g expo-cli
+
 Development Environment
     • Expo with Visual Studio Code
-Environmental Variables
-    • Add platform-tools to Path
-React Native CLI – Create a new project
+      
+Expo CLI – Create a new project
+Expo is a set of tools built around React Native and, while it has many features, the most relevant feature for us right now is that it can get you writing a React Native app within minutes
+expo init Tracky
 React Native has a built-in command line interface, which you can use to generate a new  project.
 You can access it without installing anything globally using npx, which ships with Node.js.
-expo init Tracky
 npx react-native init  Tracky
- 
-React Native CLI – expo start
+
+Expo CLI – expo start
 The command above starts Metro Blundler.
 After loading the expo developer tools site we can choose which method we want to run our project. 
 We can choose ,
@@ -27,11 +44,12 @@ We can choose ,
 	Send link with email…
 	Publish or republish project…  
 Also we can scan the given QR code by expo app ad run our project.
+
 npx react-native start
     • But I can’t implement this project using Android Studio. Because installation of Android Studio I get ppa error. Then I am connect with expo.
     • I fallow stackoverflow to solve this problem. But those answers not correct my issue
       Refere : - https://askubuntu.com/questions/866901/what-can-i-do-if-a-repository-ppa-does-not-have-a-release-file
       https://github.com/react-navigation/react-navigation/issues/2765
-      
 Reference:-udemy - The Complete React Native + Hooks Course[2020 Edition]
-    • You can visit my app using this url : -  https://expo.io/@/Tracky 
+    • You can visit my app using this url : -  https://expo.io/@chaku/Tracky
+    • You can  download my app using : - https://expo.io/artifacts/9f05fa14-fe93-489d-9f88-ec48221a2be8
